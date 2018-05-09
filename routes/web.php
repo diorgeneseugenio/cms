@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'BlogController@index')->name('blog');
+
+Route::get('/noticia/{id}', 'BlogController@show')->name('noticia');
 
 Route::prefix('admin')->group(function(){
     Auth::routes();
@@ -23,6 +23,11 @@ Route::prefix('admin')->group(function(){
         'as' => 'admin.',
         'middleware' => 'auth'
     ], function(){
+
+        Route::get('/',function(){
+            return redirect("/admin/login");
+        });
+
         Route::name("dashboard")->get('/dashboard', function(){
             return view('admin.dashboard');
         });
@@ -30,7 +35,5 @@ Route::prefix('admin')->group(function(){
         Route::resource('users', 'UsersController');
     });
 });
-
-
 
 Route::get('/home', 'HomeController@index')->name('home');

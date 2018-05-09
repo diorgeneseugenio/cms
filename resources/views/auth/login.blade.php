@@ -18,12 +18,20 @@
     <div class="wrapper">
         <div class="container">
             <h1>Administração - CMS</h1>
+            @if ($errors->has('email'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('email') }}</strong>
+                </span>
+            @endif
             <form class="form form-login" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
                 <input class="login-form" type="email" name="email" placeholder="E-mail">
                 <input class="login-form" type="password" name="password" placeholder="Password">
                 <button type="submit" id="login-button">Login</button>
             </form>
+            <a class="btn btn-primary" href="{{ route('register') }}">
+                Cadastrar-se
+            </a>
             <a class="btn btn-primary" href="{{ route('password.request') }}">
                 Esqueci Minha Senha
             </a>

@@ -73,7 +73,7 @@ class NewsController extends Controller
         $id = News::create($data)->id;
 
         if($hasFile){
-            Storage::disk('local')->put('news/'.$id.'/'.$nameFile, file_get_contents($banner->getRealPath()));
+            Storage::disk('public')->put('img/news/'.$id.'/'.$nameFile, file_get_contents($banner->getRealPath()));
         }
 
         return redirect()

@@ -20,8 +20,8 @@ class CreateNewsTable extends Migration
                 $table->string('categoria', '120');
                 $table->date('data');
                 $table->string('banner', '255');
-                $table->text('resumo');
-                $table->text('conteudo');
+                $table->longText('resumo');
+                $table->longText('conteudo');
                 $table->enum('ativo', ['Sim', 'Não']);
                 $table->timestamps();
         });
