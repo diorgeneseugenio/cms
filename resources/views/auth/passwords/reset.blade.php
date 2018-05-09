@@ -18,12 +18,12 @@
     <div class="wrapper">
         <div class="container">
             <h1>Redefinição de Senha</h1>
-            <form class="form" method="POST" action="{{ route('login') }}">
+            <form class="form form-login" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
-                <input type="hidden" name="token" value="{{ $token }}">
-                <input type="email"  name="email" placeholder="E-mail">
-                <input type="password" name="password" placeholder="Password">
-                <input type="password" name="password_confirmation" placeholder="Password">
+                <input class="login-form" type="hidden" name="token" value="{{ $token }}">
+                <input class="login-form" type="email"  name="email" placeholder="E-mail">
+                <input class="login-form" type="password" name="password" placeholder="Password">
+                <input class="login-form" type="password" name="password_confirmation" placeholder="Password">
                 <button type="submit" id="login-button">Login</button>
             </form>
             <a class="btn btn-primary" href="{{ route('password.request') }}">

@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-8">
-            <h3 class="title-route">{!! Icon::pencil() !!} Alterar Usuário</h3>
+            <h3 class="title-route">{!! Icon::pencil() !!} Alterar Notícias</h3>
         </div>
     </div>
 
@@ -15,9 +15,9 @@
         {!!
             form(
                 $form->add("edit", "submit", [
-                    'attr' => [ 'class' => 'btn btn-primary' ],
-                    'label' => 'Editar'
-                ])
+                        'attr' => [ 'class' => 'btn btn-primary' ],
+                        'label' => 'Editar'
+                    ])
             )
         !!}
     </div>

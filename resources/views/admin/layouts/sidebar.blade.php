@@ -1,7 +1,6 @@
 
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
-                <a href="#" id="toggle-sidebar"><i class="fa fa-bars"></i></a>
                 <div class="sidebar-brand">
                     <a href="#">{!! config('app.name') !!}</a>
                 </div>
@@ -23,6 +22,12 @@
                         <li class="sidebar-dropdown">
                             <a href="{!! route('admin.users.index') !!}">
                                 <span>{!! Icon::user() !!}&nbsp;&nbsp;Usuários</span>
+                            </a>
+                        </li>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="{!! route('admin.news.index') !!}">
+                                <span>{!! Icon::comment() !!}&nbsp;&nbsp;Notícias</span>
                             </a>
                         </li>
                     </ul>

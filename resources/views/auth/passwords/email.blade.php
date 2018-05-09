@@ -18,9 +18,9 @@
     <div class="wrapper">
         <div class="container">
             <h1>Esqueci Minha Senha</h1>
-            <form class="form" method="POST" action="{{ route('password.email') }}">
+            <form class="form form-login" method="POST" action="{{ route('password.email') }}">
                 {{ csrf_field() }}
-                <input type="email" name="email" placeholder="E-mail">
+                <input class="login-form" type="email" name="email" placeholder="E-mail">
                 <button type="submit">
                     Resetar Senha
                 </button>

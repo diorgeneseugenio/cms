@@ -359,12 +359,13 @@ body :-ms-input-placeholder {
   transition-duration: 1s;
   font-weight: 200;
 }
-form {
+/* LOGIN PAGE */
+.form-login {
   padding: 20px 0;
   position: relative;
   z-index: 2;
 }
-form input {
+.login-form {
   appearance: none;
   outline: 0;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -381,15 +382,15 @@ form input {
   transition-duration: 0.25s;
   font-weight: 300;
 }
-form input:hover {
+.login-form:hover{
   background-color: rgba(255, 255, 255, 0.4);
 }
-form input:focus {
+.login-form:focus {
   background-color: white;
   width: 300px;
   color: $primary-color;
 }
-form button {
+.form-login > button{
   appearance: none;
   outline: 0;
   background-color: white;
@@ -403,7 +404,7 @@ form button {
   transition-duration: 0.25s;
 
 }
-form button:hover {
+.form-login > button:hover {
   background-color: #f9fbfd;
 }
 

@@ -18,10 +18,10 @@
     <div class="wrapper">
         <div class="container">
             <h1>Administração - CMS</h1>
-            <form class="form" method="POST" action="{{ route('login') }}">
+            <form class="form form-login" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
-                <input type="email" name="email" placeholder="E-mail">
-                <input type="password" name="password" placeholder="Password">
+                <input class="login-form" type="email" name="email" placeholder="E-mail">
+                <input class="login-form" type="password" name="password" placeholder="Password">
                 <button type="submit" id="login-button">Login</button>
             </form>
             <a class="btn btn-primary" href="{{ route('password.request') }}">

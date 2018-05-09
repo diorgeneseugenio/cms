@@ -26,6 +26,7 @@ Route::prefix('admin')->group(function(){
         Route::name("dashboard")->get('/dashboard', function(){
             return view('admin.dashboard');
         });
+        Route::resource('news', 'NewsController');
         Route::resource('users', 'UsersController');
     });
 });

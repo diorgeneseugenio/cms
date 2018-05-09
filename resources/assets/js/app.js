@@ -7,6 +7,8 @@
 
 require('./bootstrap');
 
+require('summernote');
+
 window.Vue = require('vue');
 
 /**
